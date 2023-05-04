@@ -91,33 +91,9 @@ def tone_args():
         default=5,
     )
     argp.add_argument(
-        "--split1",
-        help="bass/mid split frequency in Hz (default 300)",
-        type=np.float64,
-        default=300,
-    )
-    argp.add_argument(
-        "--split2",
-        help="mid/treble split frequency in Hz (default 4000)",
-        type=np.float64,
-        default=4000,
-    )
-    argp.add_argument(
-        "--fir",
-        help="FIR filter width (must be odd; default 255, suggest 127..1023)",
-        type=int,
-        default=255,
-    )
-    argp.add_argument(
-        "--iir",
-        help="IIR filter width (must be even; suggest 32 / 16..64)",
-        type=int,
-        default=0,
-    )
-    argp.add_argument(
         "--out",
         help="write to WAV file instead of playing",
     )
-    argp.add_argument("wav", help="audio file")
+    argp.add_argument("wav", help="input audio file")
     return argp.parse_args()
 
